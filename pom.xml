@@ -106,17 +106,18 @@
           <version>2.22.1</version>
         </plugin>
         <plugin>
-          <artifactId>maven-jar-plugin</artifactId>
-          <version>3.0.2</version>
-            <configuration>
-                <archive>
-                    <manifest>
-                        <mainClass>
-                            pl.krzysztofskul.sensit5.App
-                        </mainClass>
-                    </manifest>
-                </archive>
-            </configuration>
+			<groupId>org.apache.maven.plugins</groupId>
+		     <artifactId>maven-jar-plugin</artifactId>
+		     <version>3.1.0</version>
+		     <configuration>
+		       <archive>
+		         <manifest>
+		           <addClasspath>true</addClasspath>
+		           <classpathPrefix>lib/</classpathPrefix>
+		           <mainClass>pl.krzysztofskul.sensit5.App</mainClass>
+		         </manifest>
+		       </archive>
+		     </configuration>
         </plugin>
         <plugin>
           <artifactId>maven-install-plugin</artifactId>
